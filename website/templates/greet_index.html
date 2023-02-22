@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{user}}'s Website</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <p>{{user}}'s Website</p>
+        <br>
+        {%for message in get_flashed_messages()%}
+            <p>{{message}}</p>
+        {%endfor%}
+        <br>
+    </body>
+</html>
